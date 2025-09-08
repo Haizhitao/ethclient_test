@@ -19,7 +19,8 @@ func main() {
 	//test0.BlockInfo()
 	//test0.TransactionInfo()
 	//test0.ReceiptInfo(rpcUrl)
-	test0.Wallet()
+	//test0.Wallet()
+	test0.Transfer(rpcUrl)
 }
 
 func getEnv(key string, defaultValue string) string {
