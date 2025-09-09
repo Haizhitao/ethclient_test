@@ -12,12 +12,12 @@ import (
 	"math/big"
 )
 
-func Transfer(rpcUrl string) {
+func Transfer(rpcUrl string, _privateKey string) {
 	client, err := ethclient.Dial(rpcUrl)
 	if err != nil {
 		log.Fatal("client.dial err: ", err)
 	}
-	privateKey, err := crypto.HexToECDSA("*****") //账户私钥
+	privateKey, err := crypto.HexToECDSA(_privateKey) //账户私钥
 	if err != nil {
 		log.Fatal(err)
 	}

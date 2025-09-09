@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/Haizhitao/ethclient_test/test0"
 	"github.com/joho/godotenv"
 	"log"
@@ -14,13 +13,23 @@ func main() {
 		log.Println("未找到 .evn 文件")
 	}
 	rpcUrl := getEnv("RPC_URL", "")
-	fmt.Println("rpcUrl: ", rpcUrl)
+	privateKey := getEnv("PRIVATE_KEY", "")
+	wssRpcUrl := getEnv("WSS_RPC_URL", "")
+
+	_ = privateKey
+	_ = rpcUrl
+	_ = wssRpcUrl
 
 	//test0.BlockInfo()
 	//test0.TransactionInfo()
 	//test0.ReceiptInfo(rpcUrl)
 	//test0.Wallet()
-	test0.Transfer(rpcUrl)
+	//test0.Transfer(rpcUrl, privateKey)
+	//test0.TransferERC20(rpcUrl, privateKey)
+	//test0.GetBalance(rpcUrl)
+	//test0.SubBlock(wssRpcUrl)
+	//test0.DeployByAbigen(rpcUrl, privateKey)
+	test0.DeployByCode(rpcUrl, privateKey)
 }
 
 func getEnv(key string, defaultValue string) string {
