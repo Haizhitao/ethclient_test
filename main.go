@@ -29,7 +29,9 @@ func main() {
 	//test0.GetBalance(rpcUrl)
 	//test0.SubBlock(wssRpcUrl)
 	//test0.DeployByAbigen(rpcUrl, privateKey)
-	test0.DeployByCode(rpcUrl, privateKey)
+	//test0.DeployByCode(rpcUrl, privateKey)
+	//test0.LoadContract(rpcUrl)
+	test0.ExecContractByGo(rpcUrl, privateKey)
 }
 
 func getEnv(key string, defaultValue string) string {

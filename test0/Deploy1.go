@@ -66,3 +66,5 @@ func DeployByAbigen(rpcUrl string, _privateKey string) {
 
 	_ = instance
 }
+
+//合约地址：0x304Ed073eb82ae5C0464eD4c87Fc65910Df8c5Be
