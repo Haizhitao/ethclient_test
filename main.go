@@ -31,7 +31,10 @@ func main() {
 	//test0.DeployByAbigen(rpcUrl, privateKey)
 	//test0.DeployByCode(rpcUrl, privateKey)
 	//test0.LoadContract(rpcUrl)
-	test0.ExecContractByGo(rpcUrl, privateKey)
+	//test0.ExecContractByGo(rpcUrl, privateKey)
+	//test0.ExecContractByAbi(rpcUrl, privateKey)
+	//test0.QueryEvent(rpcUrl)
+	test0.SubscribeEvent(wssRpcUrl)
 }
 
 func getEnv(key string, defaultValue string) string {
